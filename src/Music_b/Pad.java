@@ -1,118 +1,123 @@
 package Music_b;
 
-import java.awt.*;
 import java.awt.event.*;
-import java.io.File;
 import javax.swing.*;
 
-public class Pad extends JFrame implements ActionListener, KeyListener
+public class Pad extends JFrame implements ActionListener, KeyListener, MouseListener
 {
     private JPanel mainPanel;
+    private JPanel JPanel1;
     private JButton button1;
     private JButton button2;
     private JButton button3;
     private JButton button4;
+    private JButton button5;
+    private JButton button6;
+    private JButton button7;
+    private JButton button8;
+    private JButton button9;
+    private JButton button10;
+    private JButton button11;
+    private JButton button12;
+    private JButton button13;
+    private JButton button14;
+    private JButton button15;
+    private JButton button16;
     private JButton userButton;
     private JButton defaultButton1;
     private JButton defaultButton2;
-    private JPanel JPanel1;
+    private JSlider slider1;
     private int temp = 0;
 
-    public Pad() {
-        mainPanel.setBackground(Color.black);
-        JPanel1.setBackground(Color.black);
+    public Pad()
+    {
         button1.addActionListener(this);
         button2.addActionListener(this);
         button3.addActionListener(this);
         button4.addActionListener(this);
+        button5.addActionListener(this);
+        button6.addActionListener(this);
+        button7.addActionListener(this);
+        button8.addActionListener(this);
+        button9.addActionListener(this);
+        button10.addActionListener(this);
+        button11.addActionListener(this);
+        button12.addActionListener(this);
+        button13.addActionListener(this);
+        button14.addActionListener(this);
+        button15.addActionListener(this);
+        button16.addActionListener(this);
         defaultButton1.addActionListener(this);
         defaultButton2.addActionListener(this);
+        userButton.addActionListener(this);
+
+        userButton.addMouseListener(this);
 
         button1.addKeyListener(this);
         button2.addKeyListener(this);
         button3.addKeyListener(this);
         button4.addKeyListener(this);
+        button5.addKeyListener(this);
+        button6.addKeyListener(this);
+        button7.addKeyListener(this);
+        button8.addKeyListener(this);
+        button9.addKeyListener(this);
+        button10.addKeyListener(this);
+        button11.addKeyListener(this);
+        button12.addKeyListener(this);
+        button13.addKeyListener(this);
+        button14.addKeyListener(this);
+        button15.addKeyListener(this);
+        button16.addKeyListener(this);
         defaultButton1.addKeyListener(this);
         defaultButton2.addKeyListener(this);
-        button1.setBorder ( BorderFactory.createLineBorder ( Color.darkGray, 4 ) );
-        button1.setBackground(Color.gray);
-        button2.setBorder ( BorderFactory.createLineBorder ( Color.darkGray, 4 ) );
-        button2.setBackground(Color.gray);
-        button3.setBorder ( BorderFactory.createLineBorder ( Color.darkGray, 4 ) );
-        button3.setBackground(Color.gray);
-        button4.setBorder ( BorderFactory.createLineBorder ( Color.darkGray, 4 ) );
-        button4.setBackground(Color.gray);
-        defaultButton1.setBackground(Color.white);
-        defaultButton1.setBorder( BorderFactory.createLineBorder ( Color.darkGray, 4 ));
-        defaultButton2.setBackground(Color.white);
-        defaultButton2.setBorder( BorderFactory.createLineBorder ( Color.darkGray, 4 ));
-        userButton.setBackground(Color.white);
-        userButton.setBorder( BorderFactory.createLineBorder ( Color.darkGray, 4 ));
 
     }
 
     public void actionPerformed(ActionEvent e)
     {
-        if(e.getSource() == button1)
-        {
-            if(temp == 0) { File Sound = new File("profiles/default1", "1.wav"); Music_b.Sound.playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profiles/default2", "1.wav"); Music_b.Sound.playSound(Sound);}
-        }
-
-        else if(e.getSource() == button2)
-        {
-            if(temp == 0) { File Sound = new File("profiles/default1", "2.wav"); Music_b.Sound.playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profiles/default2", "2.wav"); Music_b.Sound.playSound(Sound);}
-        }
-
-        else if(e.getSource() == button3)
-        {
-            if(temp == 0) { File Sound = new File("profiles/default1", "3.wav"); Music_b.Sound.playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profiles/default2", "3.wav"); Music_b.Sound.playSound(Sound);}
-        }
-
-        else if(e.getSource() == button4)
-        {
-            if(temp == 0) { File Sound = new File("profiles/default1", "4.wav"); Music_b.Sound.playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profiles/default2", "4.wav"); Music_b.Sound.playSound(Sound);}
-        }
-
+        if(e.getSource() == button1) { SoundFiles.defaultFile(temp, 1); }
+        else if(e.getSource() == button2) { SoundFiles.defaultFile(temp, 2); }
+        else if(e.getSource() == button3) { SoundFiles.defaultFile(temp, 3); }
+        else if(e.getSource() == button4) { SoundFiles.defaultFile(temp, 4); }
+        else if(e.getSource() == button5) { SoundFiles.defaultFile(temp, 5); }
+        else if(e.getSource() == button6) { SoundFiles.defaultFile(temp, 6); }
+        else if(e.getSource() == button7) { SoundFiles.defaultFile(temp, 7); }
+        else if(e.getSource() == button8) { SoundFiles.defaultFile(temp, 8); }
+        else if(e.getSource() == button9) { SoundFiles.defaultFile(temp, 9); }
+        else if(e.getSource() == button10) { SoundFiles.defaultFile(temp, 10); }
+        else if(e.getSource() == button11) { SoundFiles.defaultFile(temp, 11); }
+        else if(e.getSource() == button12) { SoundFiles.defaultFile(temp, 12); }
+        else if(e.getSource() == button13) { SoundFiles.defaultFile(temp, 13); }
+        else if(e.getSource() == button14) { SoundFiles.defaultFile(temp, 14); }
+        else if(e.getSource() == button15) { SoundFiles.defaultFile(temp, 15); }
+        else if(e.getSource() == button16) { SoundFiles.defaultFile(temp, 16); }
         else if(e.getSource() == defaultButton1) { temp = 0; }
-
         else if(e.getSource() == defaultButton2) { temp = 1; }
-
+        else if(e.getSource() == userButton) { temp = 3; }
+        else if(e.getSource() == slider1) {  }
     }
 
     public void keyPressed(KeyEvent e)
     {
-        if(e.getKeyCode() == KeyEvent.VK_Q)
-        {
-
-            if(temp == 0) { File Sound = new File("profiles/default1", "1.wav"); Music_b.Sound.playSound(Sound);}
-            else if(temp == 1) { File Sound = new File("profiles/default2", "1.wav"); Music_b.Sound.playSound(Sound);}
-        }
-
-        else if(e.getKeyCode() == KeyEvent.VK_W)
-        {
-            if(temp == 0) { File Sound = new File("profiles/default1", "2.wav"); Music_b.Sound.playSound(Sound);}
-            else if(temp == 1) { File Sound = new File("profiles/default2", "2.wav"); Music_b.Sound.playSound(Sound);}
-        }
-
-        else if(e.getKeyCode() == KeyEvent.VK_A)
-        {
-            if(temp == 0) { File Sound = new File("profiles/default1", "3.wav"); Music_b.Sound.playSound(Sound);}
-            else if(temp == 1) { File Sound = new File("profiles/default2", "3.wav"); Music_b.Sound.playSound(Sound);}
-        }
-
-        else if(e.getKeyCode() == KeyEvent.VK_S)
-        {
-            if(temp == 0) { File Sound = new File("profiles/default1", "4.wav"); Music_b.Sound.playSound(Sound);}
-            else if(temp == 1) { File Sound = new File("profiles/default2", "4.wav"); Music_b.Sound.playSound(Sound);}
-        }
-
-        else if(e.getKeyCode() == KeyEvent.VK_1) { temp = 0; }
-
-        else if(e.getKeyCode() == KeyEvent.VK_2) { temp = 1; }
+        if(e.getKeyCode() == KeyEvent.VK_1) { SoundFiles.defaultFile(temp, 1); }
+        else if(e.getKeyCode() == KeyEvent.VK_2) { SoundFiles.defaultFile(temp, 2); }
+        else if(e.getKeyCode() == KeyEvent.VK_3) { SoundFiles.defaultFile(temp, 3); }
+        else if(e.getKeyCode() == KeyEvent.VK_4) { SoundFiles.defaultFile(temp, 4); }
+        else if(e.getKeyCode() == KeyEvent.VK_Q) { SoundFiles.defaultFile(temp, 5); }
+        else if(e.getKeyCode() == KeyEvent.VK_W) { SoundFiles.defaultFile(temp, 6); }
+        else if(e.getKeyCode() == KeyEvent.VK_E) { SoundFiles.defaultFile(temp, 7); }
+        else if(e.getKeyCode() == KeyEvent.VK_R) { SoundFiles.defaultFile(temp, 8); }
+        else if(e.getKeyCode() == KeyEvent.VK_A) { SoundFiles.defaultFile(temp, 9); }
+        else if(e.getKeyCode() == KeyEvent.VK_S) { SoundFiles.defaultFile(temp, 10); }
+        else if(e.getKeyCode() == KeyEvent.VK_D) { SoundFiles.defaultFile(temp, 11); }
+        else if(e.getKeyCode() == KeyEvent.VK_F) { SoundFiles.defaultFile(temp, 12); }
+        else if(e.getKeyCode() == KeyEvent.VK_Z) { SoundFiles.defaultFile(temp, 13); }
+        else if(e.getKeyCode() == KeyEvent.VK_X) { SoundFiles.defaultFile(temp, 14); }
+        else if(e.getKeyCode() == KeyEvent.VK_C) { SoundFiles.defaultFile(temp, 15); }
+        else if(e.getKeyCode() == KeyEvent.VK_V) { SoundFiles.defaultFile(temp, 16); }
+        else if(e.getKeyCode() == KeyEvent.VK_O) { temp = 0; }
+        else if(e.getKeyCode() == KeyEvent.VK_P) { temp = 1; }
     }
 
     public void keyReleased(KeyEvent e)
@@ -125,6 +130,31 @@ public class Pad extends JFrame implements ActionListener, KeyListener
 
     }
 
+    public void mouseClicked(MouseEvent e)
+    {
+
+    }
+
+    public void mousePressed(MouseEvent e)
+    {
+
+    }
+
+    public void mouseReleased(MouseEvent e)
+    {
+
+    }
+
+    public void mouseEntered(MouseEvent e)
+    {
+
+    }
+
+    public void mouseExited(MouseEvent e)
+    {
+
+    }
+
     public static void main(String[] args)
     {
         JFrame frame = new JFrame("Pad");
@@ -133,7 +163,6 @@ public class Pad extends JFrame implements ActionListener, KeyListener
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-        frame.setSize(400,420);
         frame.setTitle("Music_Box");
         frame.setResizable(false);
     }

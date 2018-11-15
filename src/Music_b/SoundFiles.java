@@ -1,0 +1,238 @@
+package Music_b;
+
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.filechooser.FileSystemView;
+import java.io.File;
+
+public class SoundFiles
+{
+    public static void defaultFile(int temp, int num)
+    {
+        if(temp==0) {
+            if (num == 1) {
+                File Sound = new File("profiles/default1", "1.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 2) {
+                File Sound = new File("profiles/default1", "2.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 3) {
+                File Sound = new File("profiles/default1", "3.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 4) {
+                File Sound = new File("profiles/default1", "4.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 5) {
+                File Sound = new File("profiles/default1", "5.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 6) {
+                File Sound = new File("profiles/default1", "6.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 7) {
+                File Sound = new File("profiles/default1", "7.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 8) {
+                File Sound = new File("profiles/default1", "8.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 9) {
+                File Sound = new File("profiles/default1", "9.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 10) {
+                File Sound = new File("profiles/default1", "10.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 11) {
+                File Sound = new File("profiles/default1", "11.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 12) {
+                File Sound = new File("profiles/default1", "12.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 13) {
+                File Sound = new File("profiles/default1", "13.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 14) {
+                File Sound = new File("profiles/default1", "14.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 15) {
+                File Sound = new File("profiles/default1", "15.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 16) {
+                File Sound = new File("profiles/default1", "16.wav");
+                Music_b.Sound.play(Sound);
+            }
+        }
+
+        else if(temp==1) {
+            if (num == 1) {
+                File Sound = new File("profiles/default2", "1.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 2) {
+                File Sound = new File("profiles/default2", "2.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 3) {
+                File Sound = new File("profiles/default2", "3.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 4) {
+                File Sound = new File("profiles/default2", "4.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 5) {
+                File Sound = new File("profiles/default2", "5.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 6) {
+                File Sound = new File("profiles/default2", "6.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 7) {
+                File Sound = new File("profiles/default2", "7.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 8) {
+                File Sound = new File("profiles/default2", "8.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 9) {
+                File Sound = new File("profiles/default2", "9.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 10) {
+                File Sound = new File("profiles/default2", "10.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 11) {
+                File Sound = new File("profiles/default2", "11.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 12) {
+                File Sound = new File("profiles/default2", "12.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 13) {
+                File Sound = new File("profiles/default2", "13.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 14) {
+                File Sound = new File("profiles/default2", "14.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 15) {
+                File Sound = new File("profiles/default2", "15.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 16) {
+                File Sound = new File("profiles/default2", "16.wav");
+                Music_b.Sound.play(Sound);
+            }
+        }
+
+        else if(temp==2) {
+            if (num == 1) {
+                File Sound = new File("profiles/user", "1.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 2) {
+                File Sound = new File("profiles/user", "2.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 3) {
+                File Sound = new File("profiles/user", "3.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 4) {
+                File Sound = new File("profiles/user", "4.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 5) {
+                File Sound = new File("profiles/user", "5.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 6) {
+                File Sound = new File("profiles/user", "6.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 7) {
+                File Sound = new File("profiles/user", "7.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 8) {
+                File Sound = new File("profiles/user", "8.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 9) {
+                File Sound = new File("profiles/user", "9.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 10) {
+                File Sound = new File("profiles/user", "10.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 11) {
+                File Sound = new File("profiles/user", "11.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 12) {
+                File Sound = new File("profiles/user", "12.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 13) {
+                File Sound = new File("profiles/user", "13.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 14) {
+                File Sound = new File("profiles/user", "14.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 15) {
+                File Sound = new File("profiles/user", "15.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 16) {
+                File Sound = new File("profiles/user", "16.wav");
+                Music_b.Sound.play(Sound);
+            }
+        }
+
+        else if(temp==3) {
+            if (num == 1) {
+
+            } else if (num == 2) {
+                File Sound = new File("profiles/default2", "2.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 3) {
+                File Sound = new File("profiles/default2", "3.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 4) {
+                File Sound = new File("profiles/default2", "4.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 5) {
+                File Sound = new File("profiles/default2", "5.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 6) {
+                File Sound = new File("profiles/default2", "6.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 7) {
+                File Sound = new File("profiles/default2", "7.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 8) {
+                File Sound = new File("profiles/default2", "8.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 9) {
+                File Sound = new File("profiles/default2", "9.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 10) {
+                File Sound = new File("profiles/default2", "10.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 11) {
+                File Sound = new File("profiles/default2", "11.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 12) {
+                File Sound = new File("profiles/default2", "12.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 13) {
+                File Sound = new File("profiles/default2", "13.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 14) {
+                File Sound = new File("profiles/default2", "14.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 15) {
+                File Sound = new File("profiles/default2", "15.wav");
+                Music_b.Sound.play(Sound);
+            } else if (num == 16) {
+                File Sound = new File("profiles/default2", "16.wav");
+                Music_b.Sound.play(Sound);
+            }
+        }
+    }
+
+    public static void selectFile()
+    {
+        JFileChooser file = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+        file.setDialogTitle("Select a sound");
+        file.setAcceptAllFileFilterUsed(false);
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(".WAV", "wav");
+        file.addChoosableFileFilter(filter);
+        int returnValue = file.showOpenDialog(null);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+
+        }
+    }
+
+    public static void overwriteFile()
+    {
+
+    }
+
+}
