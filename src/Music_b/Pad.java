@@ -94,9 +94,9 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         else if(e.getSource() == button14) { SoundFiles.defaultFile(temp, 14); }
         else if(e.getSource() == button15) { SoundFiles.defaultFile(temp, 15); }
         else if(e.getSource() == button16) { SoundFiles.defaultFile(temp, 16); }
-        else if(e.getSource() == defaultButton1) { temp = 0; }
-        else if(e.getSource() == defaultButton2) { temp = 1; }
-        else if(e.getSource() == userButton) { temp = 3; }
+        else if(e.getSource() == defaultButton1) { Sound.drop(); temp = 0; }
+        else if(e.getSource() == defaultButton2) { Sound.drop(); temp = 1; }
+        else if(e.getSource() == userButton) { Sound.drop(); temp = 3; }
         else if(e.getSource() == slider1) {  }
     }
 
@@ -118,8 +118,8 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         else if(e.getKeyCode() == KeyEvent.VK_X) { button14.requestFocus(); button14.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 14); }
         else if(e.getKeyCode() == KeyEvent.VK_C) { button15.requestFocus(); button15.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 15); }
         else if(e.getKeyCode() == KeyEvent.VK_V) { button16.requestFocus(); button16.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 16); }
-        else if(e.getKeyCode() == KeyEvent.VK_O) { temp = 0; }
-        else if(e.getKeyCode() == KeyEvent.VK_P) { temp = 1; }
+        else if(e.getKeyCode() == KeyEvent.VK_O) { Sound.drop(); temp = 0; }
+        else if(e.getKeyCode() == KeyEvent.VK_P) { Sound.drop(); temp = 1; }
     }
 
     public void keyReleased(KeyEvent e)
@@ -140,8 +140,6 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         else if(e.getKeyCode() == KeyEvent.VK_X) { button14.setIcon(new ImageIcon("src/gray.jpg")); }
         else if(e.getKeyCode() == KeyEvent.VK_C) { button15.setIcon(new ImageIcon("src/gray.jpg")); }
         else if(e.getKeyCode() == KeyEvent.VK_V) { button16.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_O) { temp = 0; }
-        else if(e.getKeyCode() == KeyEvent.VK_P) { temp = 1; }
     }
 
     public void keyTyped(KeyEvent e)

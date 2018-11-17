@@ -5,32 +5,29 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
 
-public class Sound
+public class Sound extends Thread implements Runnable
 {
-    public static void play(File fileName)
-    {
-        new Thread(new Runnable()
+    private static Clip clip;
+
+    public static void play(File fileName) {
+        try
         {
-            public void run()
-            {
-                try
-                {
-                    Clip clip = AudioSystem.getClip();
-                    AudioInputStream inputStream = AudioSystem.getAudioInputStream(fileName);
-                    clip.open(inputStream);
-                    clip.start();
-                }
-                catch (Exception e)
-                {
-                    System.out.println("error: " + e.getMessage() + " for " + fileName);
-                }
-            }
-        }).start();
+            clip = AudioSystem.getClip();
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(fileName);
+            clip.open(inputStream);
+            clip.start();
+        }
+        catch (Exception e)
+        {
+            System.out.println("error: " + e.getMessage() + " for " + fileName);
+        }
     }
 
-    public static void stop()
+    public static void drop()
     {
-
+        if (clip != null) {
+            clip.stop();
+        }
     }
 
 }

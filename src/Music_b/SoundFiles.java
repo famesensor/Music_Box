@@ -4,9 +4,11 @@ import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.filechooser.FileSystemView;
 import java.io.File;
+import java.nio.file.*;
 
 public class SoundFiles
 {
+
     public static void defaultFile(int temp, int num)
     {
         if(temp==0) {
@@ -167,7 +169,7 @@ public class SoundFiles
 
         else if(temp==3) {
             if (num == 1) {
-
+                SoundFiles.selectFile();
             } else if (num == 2) {
                 File Sound = new File("profiles/default2", "2.wav");
                 Music_b.Sound.play(Sound);
@@ -226,8 +228,10 @@ public class SoundFiles
         file.addChoosableFileFilter(filter);
         int returnValue = file.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
-
+            /*Path TO = Paths.get("profiles/user");
+            Files.move(file.getSelectedFile(), TO.resolve());*/
         }
+
     }
 
     public static void overwriteFile()
