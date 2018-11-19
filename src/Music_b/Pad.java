@@ -53,8 +53,6 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         defaultButton2.addActionListener(this);
         userButton.addActionListener(this);
 
-        userButton.addMouseListener(this);
-
         button1.addKeyListener(this);
         button2.addKeyListener(this);
         button3.addKeyListener(this);
