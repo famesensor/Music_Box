@@ -2,7 +2,6 @@ package Music_b;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.concurrent.TimeUnit;
 import javax.swing.*;
 
 public class Pad extends JFrame implements ActionListener, KeyListener, MouseListener
@@ -29,6 +28,8 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
     private JButton defaultButton1;
     private JButton defaultButton2;
     private JSlider slider1;
+    private JSlider slider2;
+    private JSlider slider3;
     private int temp = 0;
 
     public Pad()
@@ -100,44 +101,44 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
 
     public void keyPressed(KeyEvent e)
     {
-        if(e.getKeyCode() == KeyEvent.VK_1) { button1.requestFocus(); button1.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 1); }
-        else if(e.getKeyCode() == KeyEvent.VK_2) { button2.requestFocus(); button2.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 2); }
-        else if(e.getKeyCode() == KeyEvent.VK_3) { button3.requestFocus(); button3.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 3); }
-        else if(e.getKeyCode() == KeyEvent.VK_4) { button4.requestFocus(); button4.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 4); }
-        else if(e.getKeyCode() == KeyEvent.VK_Q) { button5.requestFocus(); button5.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 5); }
-        else if(e.getKeyCode() == KeyEvent.VK_W) { button6.requestFocus(); button6.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 6); }
-        else if(e.getKeyCode() == KeyEvent.VK_E) { button7.requestFocus(); button7.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 7); }
-        else if(e.getKeyCode() == KeyEvent.VK_R) { button8.requestFocus(); button8.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 8); }
-        else if(e.getKeyCode() == KeyEvent.VK_A) { button9.requestFocus(); button9.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 9); }
-        else if(e.getKeyCode() == KeyEvent.VK_S) { button10.requestFocus(); button10.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 10); }
-        else if(e.getKeyCode() == KeyEvent.VK_D) { button11.requestFocus(); button11.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 11); }
-        else if(e.getKeyCode() == KeyEvent.VK_F) { button12.requestFocus(); button12.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 12); }
-        else if(e.getKeyCode() == KeyEvent.VK_Z) { button13.requestFocus(); button13.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 13); }
-        else if(e.getKeyCode() == KeyEvent.VK_X) { button14.requestFocus(); button14.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 14); }
-        else if(e.getKeyCode() == KeyEvent.VK_C) { button15.requestFocus(); button15.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 15); }
-        else if(e.getKeyCode() == KeyEvent.VK_V) { button16.requestFocus(); button16.setIcon(new ImageIcon("src/green.jpg")); SoundFiles.defaultFile(temp, 16); }
+        if(e.getKeyCode() == KeyEvent.VK_1) { button1.requestFocus(); button1.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 1); }
+        else if(e.getKeyCode() == KeyEvent.VK_2) { button2.requestFocus(); button2.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 2); }
+        else if(e.getKeyCode() == KeyEvent.VK_3) { button3.requestFocus(); button3.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 3); }
+        else if(e.getKeyCode() == KeyEvent.VK_4) { button4.requestFocus(); button4.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 4); }
+        else if(e.getKeyCode() == KeyEvent.VK_Q) { button5.requestFocus(); button5.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 5); }
+        else if(e.getKeyCode() == KeyEvent.VK_W) { button6.requestFocus(); button6.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 6); }
+        else if(e.getKeyCode() == KeyEvent.VK_E) { button7.requestFocus(); button7.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 7); }
+        else if(e.getKeyCode() == KeyEvent.VK_R) { button8.requestFocus(); button8.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 8); }
+        else if(e.getKeyCode() == KeyEvent.VK_A) { button9.requestFocus(); button9.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 9); }
+        else if(e.getKeyCode() == KeyEvent.VK_S) { button10.requestFocus(); button10.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 10); }
+        else if(e.getKeyCode() == KeyEvent.VK_D) { button11.requestFocus(); button11.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 11); }
+        else if(e.getKeyCode() == KeyEvent.VK_F) { button12.requestFocus(); button12.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 12); }
+        else if(e.getKeyCode() == KeyEvent.VK_Z) { button13.requestFocus(); button13.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 13); }
+        else if(e.getKeyCode() == KeyEvent.VK_X) { button14.requestFocus(); button14.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 14); }
+        else if(e.getKeyCode() == KeyEvent.VK_C) { button15.requestFocus(); button15.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 15); }
+        else if(e.getKeyCode() == KeyEvent.VK_V) { button16.requestFocus(); button16.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 16); }
         else if(e.getKeyCode() == KeyEvent.VK_O) { Sound.drop(); temp = 0; }
         else if(e.getKeyCode() == KeyEvent.VK_P) { Sound.drop(); temp = 1; }
     }
 
     public void keyReleased(KeyEvent e)
     {
-        if(e.getKeyCode() == KeyEvent.VK_1) { button1.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_2) { button2.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_3) { button3.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_4) { button4.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_Q) { button5.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_W) { button6.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_E) { button7.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_R) { button8.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_A) { button9.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_S) { button10.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_D) { button11.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_F) { button12.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_Z) { button13.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_X) { button14.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_C) { button15.setIcon(new ImageIcon("src/gray.jpg")); }
-        else if(e.getKeyCode() == KeyEvent.VK_V) { button16.setIcon(new ImageIcon("src/gray.jpg")); }
+        if(e.getKeyCode() == KeyEvent.VK_1) { button1.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_2) { button2.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_3) { button3.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_4) { button4.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_Q) { button5.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_W) { button6.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_E) { button7.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_R) { button8.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_A) { button9.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_S) { button10.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_D) { button11.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_F) { button12.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_Z) { button13.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_X) { button14.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_C) { button15.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_V) { button16.setIcon(new ImageIcon("src/gray.png")); }
     }
 
     public void keyTyped(KeyEvent e)

@@ -15,6 +15,7 @@ public class Metronome
     }
 
     public void start(){
+        if(measure != 0)
         while(true){
             try {
                 Thread.sleep((long)(1000*(60/bpm)));
@@ -23,12 +24,12 @@ public class Metronome
             }
             counter++;
             if (counter%measure==0){
-                File S = new File("profiles/default1", "9.wav");
+                File S = new File("profiles/metrnme", "m1.wav");
                 Sound a = new Sound();
                 a.play(S);
             }
             else{
-                File S = new File("profiles/default1", "10.wav");
+                File S = new File("profiles/metrnme", "m2.wav");
                 Sound a = new Sound();
                 a.play(S);
             }
