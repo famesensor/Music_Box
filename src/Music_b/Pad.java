@@ -40,22 +40,25 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         slider2 = new JSlider();
         button18 = new JButton();
         label2 = new JLabel();
+        label3 = new JLabel();
+        label4 = new JLabel();
         label1 = new JLabel();
 
         //======== this ========
         setMinimumSize(null);
+        setTitle("Music_Box");
         Container contentPane = getContentPane();
         contentPane.setLayout(null);
 
         //---- defaultButton1 ----
-        defaultButton1.setIcon(new ImageIcon("E:\\Docs\\#2-1\\CSS222\\Music_Box\\src\\up_w.png"));
+        defaultButton1.setIcon(new ImageIcon(getClass().getResource("/up_w.png")));
         defaultButton1.setBorderPainted(false);
         defaultButton1.setContentAreaFilled(false);
         contentPane.add(defaultButton1);
         defaultButton1.setBounds(150, 30, 100, defaultButton1.getPreferredSize().height);
 
         //---- defaultButton2 ----
-        defaultButton2.setIcon(new ImageIcon("E:\\Docs\\#2-1\\CSS222\\Music_Box\\src\\down_w.png"));
+        defaultButton2.setIcon(new ImageIcon(getClass().getResource("/up_w.png")));
         defaultButton2.setBorderPainted(false);
         defaultButton2.setContentAreaFilled(false);
         contentPane.add(defaultButton2);
@@ -254,8 +257,23 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
 
         //---- label2 ----
         label2.setText("METRONOME");
+        label2.setFont(new Font("Bauhaus 93", label2.getFont().getStyle() | Font.ITALIC, label2.getFont().getSize() + 9));
         contentPane.add(label2);
-        label2.setBounds(new Rectangle(new Point(35, 110), label2.getPreferredSize()));
+        label2.setBounds(10, 110, 135, label2.getPreferredSize().height);
+
+        //---- label3 ----
+        label3.setText("Music_Box");
+        label3.setFont(new Font("Bauhaus 93", label3.getFont().getStyle(), label3.getFont().getSize() + 9));
+        label3.setBackground(Color.white);
+        contentPane.add(label3);
+        label3.setBounds(15, 5, 120, label3.getPreferredSize().height);
+
+        //---- label4 ----
+        label4.setText("Laucnpad");
+        label4.setFont(new Font("Bauhaus 93", label4.getFont().getStyle(), label4.getFont().getSize() + 9));
+        label4.setBackground(Color.white);
+        contentPane.add(label4);
+        label4.setBounds(510, 5, 100, 31);
 
         //---- label1 ----
         label1.setIcon(new ImageIcon("E:\\Docs\\#2-1\\CSS222\\Music_Box\\src\\bg.png"));
@@ -461,6 +479,8 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
     private JSlider slider2;
     private JButton button18;
     private JLabel label2;
+    private JLabel label3;
+    private JLabel label4;
     private JLabel label1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
