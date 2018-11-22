@@ -4,18 +4,14 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import javax.swing.border.*;
-import javax.swing.plaf.*;
-import net.miginfocom.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
-public class Pad extends JFrame implements ActionListener, KeyListener, MouseListener{
-
-    private void createUIComponents() {
-        // TODO: add custom component creation code here
-    }
+public class Pad extends JFrame implements ActionListener, KeyListener, MouseListener, ChangeListener {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - satit
+        // Generated using JFormDesigner Evaluation license - Korrawich K
         defaultButton1 = new JButton();
         defaultButton2 = new JButton();
         userButton = new JButton();
@@ -35,9 +31,9 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button14 = new JButton();
         button15 = new JButton();
         button16 = new JButton();
-        button17 = new JButton();
+        metronomeButton = new JButton();
         slider1 = new JSlider();
-        slider2 = new JSlider();
+        metronomeSlider = new JSlider();
         button18 = new JButton();
         label2 = new JLabel();
         label3 = new JLabel();
@@ -58,7 +54,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         defaultButton1.setBounds(150, 30, 100, defaultButton1.getPreferredSize().height);
 
         //---- defaultButton2 ----
-        defaultButton2.setIcon(new ImageIcon(getClass().getResource("/up_w.png")));
+        defaultButton2.setIcon(new ImageIcon(getClass().getResource("/down_w.png")));
         defaultButton2.setBorderPainted(false);
         defaultButton2.setContentAreaFilled(false);
         contentPane.add(defaultButton2);
@@ -229,10 +225,10 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         contentPane.add(button16);
         button16.setBounds(510, 455, 100, 100);
 
-        //---- button17 ----
-        button17.setText("text");
-        contentPane.add(button17);
-        button17.setBounds(510, 70, 100, button17.getPreferredSize().height);
+        //---- metronomeButton ----
+        metronomeButton.setText("text");
+        contentPane.add(metronomeButton);
+        metronomeButton.setBounds(510, 70, 100, metronomeButton.getPreferredSize().height);
 
         //---- slider1 ----
         slider1.setOrientation(SwingConstants.VERTICAL);
@@ -242,13 +238,19 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         contentPane.add(slider1);
         slider1.setBounds(75, 140, 55, 375);
 
-        //---- slider2 ----
-        slider2.setOrientation(SwingConstants.VERTICAL);
-        slider2.setBorder(new CompoundBorder(
+        //---- metronomeSlider ----
+        metronomeSlider.setOrientation(SwingConstants.VERTICAL);
+        metronomeSlider.setBorder(new CompoundBorder(
             new TitledBorder("Bpm"),
             new EmptyBorder(5, 5, 5, 5)));
-        contentPane.add(slider2);
-        slider2.setBounds(15, 140, 56, 375);
+        metronomeSlider.setMaximum(180);
+        metronomeSlider.setMajorTickSpacing(30);
+        metronomeSlider.setPaintTicks(true);
+        metronomeSlider.setSnapToTicks(true);
+        metronomeSlider.setPaintLabels(true);
+        metronomeSlider.setValue(120);
+        contentPane.add(metronomeSlider);
+        metronomeSlider.setBounds(15, 140, 56, 375);
 
         //---- button18 ----
         button18.setText("Stop");
@@ -257,7 +259,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
 
         //---- label2 ----
         label2.setText("METRONOME");
-        label2.setFont(new Font("Bauhaus 93", label2.getFont().getStyle() | Font.ITALIC, label2.getFont().getSize() + 9));
+        label2.setFont(new Font("Bauhaus 93", label2.getFont().getStyle() | Font.ITALIC, label2.getFont().getSize() + 8));
         contentPane.add(label2);
         label2.setBounds(10, 110, 135, label2.getPreferredSize().height);
 
@@ -273,7 +275,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         label4.setFont(new Font("Bauhaus 93", label4.getFont().getStyle(), label4.getFont().getSize() + 9));
         label4.setBackground(Color.white);
         contentPane.add(label4);
-        label4.setBounds(510, 5, 100, 31);
+        label4.setBounds(495, 5, 115, 31);
 
         //---- label1 ----
         label1.setIcon(new ImageIcon("E:\\Docs\\#2-1\\CSS222\\Music_Box\\src\\bg.png"));
@@ -303,25 +305,25 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
     public Pad()
     {
         initComponents();
-        button1.addActionListener(this);
-        button2.addActionListener(this);
-        button3.addActionListener(this);
-        button4.addActionListener(this);
-        button5.addActionListener(this);
-        button6.addActionListener(this);
-        button7.addActionListener(this);
-        button8.addActionListener(this);
-        button9.addActionListener(this);
-        button10.addActionListener(this);
-        button11.addActionListener(this);
-        button12.addActionListener(this);
-        button13.addActionListener(this);
-        button14.addActionListener(this);
-        button15.addActionListener(this);
-        button16.addActionListener(this);
-        defaultButton1.addActionListener(this);
-        defaultButton2.addActionListener(this);
-        userButton.addActionListener(this);
+        button1.addMouseListener(this);
+        button2.addMouseListener(this);
+        button3.addMouseListener(this);
+        button4.addMouseListener(this);
+        button5.addMouseListener(this);
+        button6.addMouseListener(this);
+        button7.addMouseListener(this);
+        button8.addMouseListener(this);
+        button9.addMouseListener(this);
+        button10.addMouseListener(this);
+        button11.addMouseListener(this);
+        button12.addMouseListener(this);
+        button13.addMouseListener(this);
+        button14.addMouseListener(this);
+        button15.addMouseListener(this);
+        button16.addMouseListener(this);
+        defaultButton1.addMouseListener(this);
+        defaultButton2.addMouseListener(this);
+        metronomeButton.addMouseListener(this);
 
         button1.addKeyListener(this);
         button2.addKeyListener(this);
@@ -341,30 +343,12 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button16.addKeyListener(this);
         defaultButton1.addKeyListener(this);
         defaultButton2.addKeyListener(this);
-
+        metronomeButton.addKeyListener(this);
     }
 
     public void actionPerformed(ActionEvent e)
     {
-        if(e.getSource() == button1) { SoundFiles.defaultFile(temp, 1); }
-        else if(e.getSource() == button2) { SoundFiles.defaultFile(temp, 2); }
-        else if(e.getSource() == button3) { SoundFiles.defaultFile(temp, 3); }
-        else if(e.getSource() == button4) { SoundFiles.defaultFile(temp, 4); }
-        else if(e.getSource() == button5) { SoundFiles.defaultFile(temp, 5); }
-        else if(e.getSource() == button6) { SoundFiles.defaultFile(temp, 6); }
-        else if(e.getSource() == button7) { SoundFiles.defaultFile(temp, 7); }
-        else if(e.getSource() == button8) { SoundFiles.defaultFile(temp, 8); }
-        else if(e.getSource() == button9) { SoundFiles.defaultFile(temp, 9); }
-        else if(e.getSource() == button10) { SoundFiles.defaultFile(temp, 10); }
-        else if(e.getSource() == button11) { SoundFiles.defaultFile(temp, 11); }
-        else if(e.getSource() == button12) { SoundFiles.defaultFile(temp, 12); }
-        else if(e.getSource() == button13) { SoundFiles.defaultFile(temp, 13); }
-        else if(e.getSource() == button14) { SoundFiles.defaultFile(temp, 14); }
-        else if(e.getSource() == button15) { SoundFiles.defaultFile(temp, 15); }
-        else if(e.getSource() == button16) { SoundFiles.defaultFile(temp, 16); }
-        else if(e.getSource() == defaultButton1) { Sound.drop(); temp = 0; }
-        else if(e.getSource() == defaultButton2) { Sound.drop(); temp = 1; }
-        else if(e.getSource() == userButton) { Sound.drop(); temp = 3; }
+
     }
 
     public void keyPressed(KeyEvent e)
@@ -387,6 +371,13 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         else if(e.getKeyCode() == KeyEvent.VK_V) { button16.requestFocus(); button16.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 16); }
         else if(e.getKeyCode() == KeyEvent.VK_O) { defaultButton1.requestFocus(); defaultButton1.setIcon(new ImageIcon("src/up_g.png")); temp = 0; }
         else if(e.getKeyCode() == KeyEvent.VK_P) { defaultButton2.requestFocus(); defaultButton2.setIcon(new ImageIcon("src/down_g.png"));  temp = 1; }
+        new Thread() {
+            public void run() {
+                if(e.getKeyCode() == KeyEvent.VK_I) {
+                    Sound.Metronome(120, 2);
+                }
+            }
+        }.start();
     }
 
     public void keyReleased(KeyEvent e)
@@ -423,12 +414,53 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
 
     public void mousePressed(MouseEvent e)
     {
-
+        if(e.getSource() == button1) { button1.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 1); }
+        else if(e.getSource() == button2) { button2.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 2); }
+        else if(e.getSource() == button3) { button3.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 3); }
+        else if(e.getSource() == button4) { button4.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 4); }
+        else if(e.getSource() == button5) { button5.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 5); }
+        else if(e.getSource() == button6) { button6.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 6); }
+        else if(e.getSource() == button7) { button7.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 7); }
+        else if(e.getSource() == button8) { button8.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 8); }
+        else if(e.getSource() == button9) { button9.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 9); }
+        else if(e.getSource() == button10) { button10.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 10); }
+        else if(e.getSource() == button11) { button11.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 11); }
+        else if(e.getSource() == button12) { button12.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 12); }
+        else if(e.getSource() == button13) { button13.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 13); }
+        else if(e.getSource() == button14) { button14.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 14); }
+        else if(e.getSource() == button15) { button15.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 15); }
+        else if(e.getSource() == button16) { button16.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 16); }
+        else if(e.getSource() == defaultButton1) { defaultButton1.setIcon(new ImageIcon("src/up_g.png")); temp = 0; }
+        else if(e.getSource() == defaultButton2) { defaultButton2.setIcon(new ImageIcon("src/down_g.png"));  temp = 1; }
+        new Thread() {
+            public void run() {
+                if(e.getSource() == metronomeButton) {
+                    Sound.Metronome(120, 2);
+                }
+            }
+        }.start();
     }
 
     public void mouseReleased(MouseEvent e)
     {
-
+        if(e.getSource() == button1) { button1.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button2) { button2.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button3) { button3.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button4) { button4.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button5) { button5.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button6) { button6.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button7) { button7.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button8) { button8.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button9) { button9.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button10) { button10.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button11) { button11.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button12) { button12.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button13) { button13.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button14) { button14.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button15) { button15.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == button16) { button16.setIcon(new ImageIcon("src/gray.png")); }
+        else if(e.getSource() == defaultButton1) { defaultButton1.setIcon(new ImageIcon("src/up_w.png")); }
+        else if(e.getSource() == defaultButton2) { defaultButton2.setIcon(new ImageIcon("src/down_w.png")); }
     }
 
     public void mouseEntered(MouseEvent e)
@@ -440,6 +472,13 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
     {
 
     }
+
+    public void stateChanged(ChangeEvent e)
+    {
+        new Thread() {
+            public void run() {
+        if(e.getSource() == metronomeSlider) { Sound.Metronome(metronomeSlider.getValue(), 2); }
+    }}.start();}
 
     public static void main(String[] args)
     {
@@ -454,7 +493,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - satit
+    // Generated using JFormDesigner Evaluation license - Korrawich K
     private JButton defaultButton1;
     private JButton defaultButton2;
     private JButton userButton;
@@ -474,9 +513,9 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
     private JButton button14;
     private JButton button15;
     private JButton button16;
-    private JButton button17;
+    private JButton metronomeButton;
     private JSlider slider1;
-    private JSlider slider2;
+    private JSlider metronomeSlider;
     private JButton button18;
     private JLabel label2;
     private JLabel label3;

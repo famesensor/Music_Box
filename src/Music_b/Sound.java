@@ -5,9 +5,14 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
 
-public class Sound extends Thread implements Runnable
+public class Sound extends Thread
 {
     private static Clip clip;
+
+    public Sound()
+    {
+
+    }
 
     public static void play(File fileName) {
         try
@@ -23,11 +28,25 @@ public class Sound extends Thread implements Runnable
         }
     }
 
-    public static void drop()
-    {
-        if (clip != null) {
-            clip.stop();
-        }
+    public static void Metronome(double bpm, int measure){
+        int counter = 0;
+        if(measure != 0)
+            while(true){
+                try {
+                    Thread.sleep((long)(1000*(60/bpm)));
+                }catch(InterruptedException e) {
+                    e.printStackTrace();
+                }
+                counter++;
+                if (counter%measure==0){
+                    File S = new File("profiles/metrnme", "1.wav");
+                    Sound.play(S);
+                }
+                else{
+                    File S = new File("profiles/metrnme", "2.wav");
+                    Sound.play(S);
+                }
+            }
     }
 
 }
