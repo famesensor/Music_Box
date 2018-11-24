@@ -7,7 +7,7 @@ import javax.swing.border.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-public class Pad extends JFrame implements ActionListener, KeyListener, MouseListener, ChangeListener {
+public class Pad extends JFrame implements ActionListener, KeyListener, MouseListener, ChangeListener{
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -31,10 +31,9 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button14 = new JButton();
         button15 = new JButton();
         button16 = new JButton();
-        metronomeButton = new JButton();
-        slider1 = new JSlider();
+        changeButton = new JButton();
+        accentSlider = new JSlider();
         metronomeSlider = new JSlider();
-        button18 = new JButton();
         label2 = new JLabel();
         label3 = new JLabel();
         label4 = new JLabel();
@@ -58,12 +57,12 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         defaultButton2.setBorderPainted(false);
         defaultButton2.setContentAreaFilled(false);
         contentPane.add(defaultButton2);
-        defaultButton2.setBounds(270, 30, 100, defaultButton2.getPreferredSize().height);
+        defaultButton2.setBounds(255, 30, 100, defaultButton2.getPreferredSize().height);
 
         //---- userButton ----
-        userButton.setText("text");
+        userButton.setText("User");
         contentPane.add(userButton);
-        userButton.setBounds(390, 70, 100, userButton.getPreferredSize().height);
+        userButton.setBounds(360, 70, 100, userButton.getPreferredSize().height);
 
         //---- button1 ----
         button1.setBorderPainted(false);
@@ -83,7 +82,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button2.setMinimumSize(new Dimension(1000, 100));
         button2.setContentAreaFilled(false);
         contentPane.add(button2);
-        button2.setBounds(270, 110, 100, 100);
+        button2.setBounds(255, 110, 100, 100);
 
         //---- button3 ----
         button3.setBorderPainted(false);
@@ -93,7 +92,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button3.setMinimumSize(new Dimension(1000, 100));
         button3.setContentAreaFilled(false);
         contentPane.add(button3);
-        button3.setBounds(390, 110, 100, 100);
+        button3.setBounds(360, 110, 100, 100);
 
         //---- button4 ----
         button4.setBorderPainted(false);
@@ -103,7 +102,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button4.setMinimumSize(new Dimension(1000, 100));
         button4.setContentAreaFilled(false);
         contentPane.add(button4);
-        button4.setBounds(510, 110, 100, 100);
+        button4.setBounds(465, 110, 100, 100);
 
         //---- button5 ----
         button5.setBorderPainted(false);
@@ -113,7 +112,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button5.setMinimumSize(new Dimension(1000, 100));
         button5.setContentAreaFilled(false);
         contentPane.add(button5);
-        button5.setBounds(150, 225, 100, 100);
+        button5.setBounds(150, 215, 100, 100);
 
         //---- button6 ----
         button6.setBorderPainted(false);
@@ -123,7 +122,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button6.setMinimumSize(new Dimension(1000, 100));
         button6.setContentAreaFilled(false);
         contentPane.add(button6);
-        button6.setBounds(270, 225, 100, 100);
+        button6.setBounds(255, 215, 100, 100);
 
         //---- button7 ----
         button7.setBorderPainted(false);
@@ -133,7 +132,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button7.setMinimumSize(new Dimension(1000, 100));
         button7.setContentAreaFilled(false);
         contentPane.add(button7);
-        button7.setBounds(390, 225, 100, 100);
+        button7.setBounds(360, 215, 100, 100);
 
         //---- button8 ----
         button8.setBorderPainted(false);
@@ -143,7 +142,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button8.setMinimumSize(new Dimension(1000, 100));
         button8.setContentAreaFilled(false);
         contentPane.add(button8);
-        button8.setBounds(510, 225, 100, 100);
+        button8.setBounds(465, 215, 100, 100);
 
         //---- button9 ----
         button9.setBorderPainted(false);
@@ -153,7 +152,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button9.setMinimumSize(new Dimension(1000, 100));
         button9.setContentAreaFilled(false);
         contentPane.add(button9);
-        button9.setBounds(150, 340, 100, 100);
+        button9.setBounds(150, 320, 100, 100);
 
         //---- button10 ----
         button10.setBorderPainted(false);
@@ -163,7 +162,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button10.setMinimumSize(new Dimension(1000, 100));
         button10.setContentAreaFilled(false);
         contentPane.add(button10);
-        button10.setBounds(270, 340, 100, 100);
+        button10.setBounds(255, 320, 100, 100);
 
         //---- button11 ----
         button11.setBorderPainted(false);
@@ -173,7 +172,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button11.setMinimumSize(new Dimension(1000, 100));
         button11.setContentAreaFilled(false);
         contentPane.add(button11);
-        button11.setBounds(390, 340, 100, 100);
+        button11.setBounds(360, 320, 100, 100);
 
         //---- button12 ----
         button12.setBorderPainted(false);
@@ -183,7 +182,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button12.setMinimumSize(new Dimension(1000, 100));
         button12.setContentAreaFilled(false);
         contentPane.add(button12);
-        button12.setBounds(510, 340, 100, 100);
+        button12.setBounds(465, 320, 100, 100);
 
         //---- button13 ----
         button13.setBorderPainted(false);
@@ -193,7 +192,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button13.setMinimumSize(new Dimension(1000, 100));
         button13.setContentAreaFilled(false);
         contentPane.add(button13);
-        button13.setBounds(150, 455, 100, 100);
+        button13.setBounds(150, 425, 100, 100);
 
         //---- button14 ----
         button14.setBorderPainted(false);
@@ -203,7 +202,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button14.setMinimumSize(new Dimension(1000, 100));
         button14.setContentAreaFilled(false);
         contentPane.add(button14);
-        button14.setBounds(270, 455, 100, 100);
+        button14.setBounds(255, 425, 100, 100);
 
         //---- button15 ----
         button15.setBorderPainted(false);
@@ -213,7 +212,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button15.setMinimumSize(new Dimension(1000, 100));
         button15.setContentAreaFilled(false);
         contentPane.add(button15);
-        button15.setBounds(390, 455, 100, 100);
+        button15.setBounds(360, 425, 100, 100);
 
         //---- button16 ----
         button16.setBorderPainted(false);
@@ -223,39 +222,40 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button16.setMinimumSize(new Dimension(1000, 100));
         button16.setContentAreaFilled(false);
         contentPane.add(button16);
-        button16.setBounds(510, 455, 100, 100);
+        button16.setBounds(465, 425, 100, 100);
 
-        //---- metronomeButton ----
-        metronomeButton.setText("text");
-        contentPane.add(metronomeButton);
-        metronomeButton.setBounds(510, 70, 100, metronomeButton.getPreferredSize().height);
+        //---- changeButton ----
+        changeButton.setText("C");
+        contentPane.add(changeButton);
+        changeButton.setBounds(465, 70, 100, changeButton.getPreferredSize().height);
 
-        //---- slider1 ----
-        slider1.setOrientation(SwingConstants.VERTICAL);
-        slider1.setBorder(new CompoundBorder(
+        //---- accentSlider ----
+        accentSlider.setOrientation(SwingConstants.VERTICAL);
+        accentSlider.setBorder(new CompoundBorder(
             new TitledBorder("Accent"),
             new EmptyBorder(5, 5, 5, 5)));
-        contentPane.add(slider1);
-        slider1.setBounds(75, 140, 55, 375);
+        accentSlider.setPaintTicks(true);
+        accentSlider.setSnapToTicks(true);
+        accentSlider.setMajorTickSpacing(1);
+        accentSlider.setMaximum(4);
+        accentSlider.setPaintLabels(true);
+        accentSlider.setValue(0);
+        contentPane.add(accentSlider);
+        accentSlider.setBounds(75, 140, 65, 375);
 
         //---- metronomeSlider ----
         metronomeSlider.setOrientation(SwingConstants.VERTICAL);
         metronomeSlider.setBorder(new CompoundBorder(
-            new TitledBorder("Bpm"),
+            new TitledBorder("BPM"),
             new EmptyBorder(5, 5, 5, 5)));
-        metronomeSlider.setMaximum(180);
+        metronomeSlider.setMaximum(240);
         metronomeSlider.setMajorTickSpacing(30);
         metronomeSlider.setPaintTicks(true);
         metronomeSlider.setSnapToTicks(true);
         metronomeSlider.setPaintLabels(true);
-        metronomeSlider.setValue(120);
+        metronomeSlider.setValue(0);
         contentPane.add(metronomeSlider);
         metronomeSlider.setBounds(15, 140, 56, 375);
-
-        //---- button18 ----
-        button18.setText("Stop");
-        contentPane.add(button18);
-        button18.setBounds(15, 525, 115, button18.getPreferredSize().height);
 
         //---- label2 ----
         label2.setText("METRONOME");
@@ -271,16 +271,16 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         label3.setBounds(15, 5, 120, label3.getPreferredSize().height);
 
         //---- label4 ----
-        label4.setText("Laucnpad");
+        label4.setText("Launchpad");
         label4.setFont(new Font("Bauhaus 93", label4.getFont().getStyle(), label4.getFont().getSize() + 9));
         label4.setBackground(Color.white);
         contentPane.add(label4);
-        label4.setBounds(495, 5, 115, 31);
+        label4.setBounds(435, 5, 130, 31);
 
         //---- label1 ----
         label1.setIcon(new ImageIcon("E:\\Docs\\#2-1\\CSS222\\Music_Box\\src\\bg.png"));
         contentPane.add(label1);
-        label1.setBounds(0, 0, 630, 570);
+        label1.setBounds(0, 0, 590, 550);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -323,7 +323,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button16.addMouseListener(this);
         defaultButton1.addMouseListener(this);
         defaultButton2.addMouseListener(this);
-        metronomeButton.addMouseListener(this);
+        changeButton.addMouseListener(this);
 
         button1.addKeyListener(this);
         button2.addKeyListener(this);
@@ -343,7 +343,9 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button16.addKeyListener(this);
         defaultButton1.addKeyListener(this);
         defaultButton2.addKeyListener(this);
-        metronomeButton.addKeyListener(this);
+
+        metronomeSlider.addMouseListener(this);
+        accentSlider.addMouseListener(this);
     }
 
     public void actionPerformed(ActionEvent e)
@@ -370,14 +372,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         else if(e.getKeyCode() == KeyEvent.VK_C) { button15.requestFocus(); button15.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 15); }
         else if(e.getKeyCode() == KeyEvent.VK_V) { button16.requestFocus(); button16.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 16); }
         else if(e.getKeyCode() == KeyEvent.VK_O) { defaultButton1.requestFocus(); defaultButton1.setIcon(new ImageIcon("src/up_g.png")); temp = 0; }
-        else if(e.getKeyCode() == KeyEvent.VK_P) { defaultButton2.requestFocus(); defaultButton2.setIcon(new ImageIcon("src/down_g.png"));  temp = 1; }
-        new Thread() {
-            public void run() {
-                if(e.getKeyCode() == KeyEvent.VK_I) {
-                    Sound.Metronome(120, 2);
-                }
-            }
-        }.start();
+        else if(e.getKeyCode() == KeyEvent.VK_P) { defaultButton2.requestFocus(); defaultButton2.setIcon(new ImageIcon("src/down_g.png")); temp = 1; }
     }
 
     public void keyReleased(KeyEvent e)
@@ -431,11 +426,38 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         else if(e.getSource() == button15) { button15.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 15); }
         else if(e.getSource() == button16) { button16.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 16); }
         else if(e.getSource() == defaultButton1) { defaultButton1.setIcon(new ImageIcon("src/up_g.png")); temp = 0; }
-        else if(e.getSource() == defaultButton2) { defaultButton2.setIcon(new ImageIcon("src/down_g.png"));  temp = 1; }
+        else if(e.getSource() == defaultButton2) { defaultButton2.setIcon(new ImageIcon("src/down_g.png")); temp = 1; }
+        else if(e.getSource() == changeButton) { temp = 3; }
         new Thread() {
             public void run() {
-                if(e.getSource() == metronomeButton) {
-                    Sound.Metronome(120, 2);
+                if(e.getSource() == metronomeSlider) {
+                    Sound.flag = 0;
+                    try {
+                        Thread.sleep(600);
+                    }
+                    catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    button1.requestFocus();
+                    Sound.flag = 1;
+                    Sound.Metronome(metronomeSlider.getValue(), accentSlider.getValue());
+                }
+            }
+        }.start();
+
+        new Thread() {
+            public void run() {
+                if(e.getSource() == accentSlider) {
+                    Sound.flag = 0;
+                    try {
+                        Thread.sleep(600);
+                    }
+                    catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    button1.requestFocus();
+                    Sound.flag = 1;
+                    Sound.Metronome(metronomeSlider.getValue(), accentSlider.getValue());
                 }
             }
         }.start();
@@ -475,10 +497,8 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
 
     public void stateChanged(ChangeEvent e)
     {
-        new Thread() {
-            public void run() {
-        if(e.getSource() == metronomeSlider) { Sound.Metronome(metronomeSlider.getValue(), 2); }
-    }}.start();}
+
+    }
 
     public static void main(String[] args)
     {
@@ -513,10 +533,9 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
     private JButton button14;
     private JButton button15;
     private JButton button16;
-    private JButton metronomeButton;
-    private JSlider slider1;
+    private JButton changeButton;
+    private JSlider accentSlider;
     private JSlider metronomeSlider;
-    private JButton button18;
     private JLabel label2;
     private JLabel label3;
     private JLabel label4;

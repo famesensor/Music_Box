@@ -8,6 +8,7 @@ import java.io.File;
 public class Sound extends Thread
 {
     private static Clip clip;
+    static int flag = 1;
 
     public Sound()
     {
@@ -28,10 +29,18 @@ public class Sound extends Thread
         }
     }
 
-    public static void Metronome(double bpm, int measure){
+    public static void pause()
+    {
+        if (clip != null) {
+            clip.stop();
+        }
+    }
+
+    public static void Metronome(double bpm, int measure) {
         int counter = 0;
         if(measure != 0)
             while(true){
+                if(flag == 0) break;
                 try {
                     Thread.sleep((long)(1000*(60/bpm)));
                 }catch(InterruptedException e) {
@@ -39,13 +48,14 @@ public class Sound extends Thread
                 }
                 counter++;
                 if (counter%measure==0){
-                    File S = new File("profiles/metrnme", "1.wav");
-                    Sound.play(S);
+                    File sound = new File("profiles/metrnme", "1.wav");
+                    Sound.play(sound);
                 }
                 else{
-                    File S = new File("profiles/metrnme", "2.wav");
-                    Sound.play(S);
+                    File sound = new File("profiles/metrnme", "2.wav");
+                    Sound.play(sound);
                 }
+
             }
     }
 

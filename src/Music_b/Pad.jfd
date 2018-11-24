@@ -23,15 +23,15 @@ new FormModel {
 				"borderPainted": false
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 270
+				"x": 255
 				"y": 30
 				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "userButton"
-				"text": "text"
+				"text": "User"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 390
+				"x": 360
 				"y": 70
 				"width": 100
 			} )
@@ -58,7 +58,7 @@ new FormModel {
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 270
+				"x": 255
 				"y": 110
 				"width": 100
 				"height": 100
@@ -72,7 +72,7 @@ new FormModel {
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 390
+				"x": 360
 				"y": 110
 				"width": 100
 				"height": 100
@@ -86,7 +86,7 @@ new FormModel {
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 510
+				"x": 465
 				"y": 110
 				"width": 100
 				"height": 100
@@ -101,7 +101,7 @@ new FormModel {
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 150
-				"y": 225
+				"y": 215
 				"width": 100
 				"height": 100
 			} )
@@ -114,8 +114,8 @@ new FormModel {
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 270
-				"y": 225
+				"x": 255
+				"y": 215
 				"width": 100
 				"height": 100
 			} )
@@ -128,8 +128,8 @@ new FormModel {
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 390
-				"y": 225
+				"x": 360
+				"y": 215
 				"width": 100
 				"height": 100
 			} )
@@ -142,8 +142,8 @@ new FormModel {
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 510
-				"y": 225
+				"x": 465
+				"y": 215
 				"width": 100
 				"height": 100
 			} )
@@ -157,7 +157,7 @@ new FormModel {
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 150
-				"y": 340
+				"y": 320
 				"width": 100
 				"height": 100
 			} )
@@ -170,8 +170,8 @@ new FormModel {
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 270
-				"y": 340
+				"x": 255
+				"y": 320
 				"width": 100
 				"height": 100
 			} )
@@ -184,8 +184,8 @@ new FormModel {
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 390
-				"y": 340
+				"x": 360
+				"y": 320
 				"width": 100
 				"height": 100
 			} )
@@ -198,8 +198,8 @@ new FormModel {
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 510
-				"y": 340
+				"x": 465
+				"y": 320
 				"width": 100
 				"height": 100
 			} )
@@ -213,7 +213,7 @@ new FormModel {
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 150
-				"y": 455
+				"y": 425
 				"width": 100
 				"height": 100
 			} )
@@ -226,8 +226,8 @@ new FormModel {
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 270
-				"y": 455
+				"x": 255
+				"y": 425
 				"width": 100
 				"height": 100
 			} )
@@ -240,8 +240,8 @@ new FormModel {
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 390
-				"y": 455
+				"x": 360
+				"y": 425
 				"width": 100
 				"height": 100
 			} )
@@ -254,52 +254,50 @@ new FormModel {
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 510
-				"y": 455
+				"x": 465
+				"y": 425
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "metronomeButton"
-				"text": "text"
+				name: "changeButton"
+				"text": "C"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 510
+				"x": 465
 				"y": 70
 				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JSlider" ) {
-				name: "slider1"
+				name: "accentSlider"
 				"orientation": 1
 				"border": new javax.swing.border.CompoundBorder( new javax.swing.border.TitledBorder( "Accent" ), &EmptyBorder0 new javax.swing.border.EmptyBorder( 5, 5, 5, 5 ) )
+				"paintTicks": true
+				"snapToTicks": true
+				"majorTickSpacing": 1
+				"maximum": 4
+				"paintLabels": true
+				"value": 0
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 75
 				"y": 140
 				"height": 375
-				"width": 55
+				"width": 65
 			} )
 			add( new FormComponent( "javax.swing.JSlider" ) {
 				name: "metronomeSlider"
 				"orientation": 1
-				"border": new javax.swing.border.CompoundBorder( new javax.swing.border.TitledBorder( "Bpm" ), #EmptyBorder0 )
-				"maximum": 180
+				"border": new javax.swing.border.CompoundBorder( new javax.swing.border.TitledBorder( "BPM" ), #EmptyBorder0 )
+				"maximum": 240
 				"majorTickSpacing": 30
 				"paintTicks": true
 				"snapToTicks": true
 				"paintLabels": true
-				"value": 120
+				"value": 0
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 15
 				"y": 140
 				"height": 375
 				"width": 56
-			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button18"
-				"text": "Stop"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 15
-				"y": 525
-				"width": 115
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label2"
@@ -322,13 +320,13 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label4"
-				"text": "Laucnpad"
+				"text": "Launchpad"
 				"font": #SwingDerivedFont0
 				"background": new java.awt.Color( 255, 255, 255, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 115
+				"width": 130
 				"height": 31
-				"x": 495
+				"x": 435
 				"y": 5
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -337,12 +335,12 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 0
 				"y": 0
-				"width": 630
-				"height": 570
+				"width": 590
+				"height": 550
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 630, 600 )
+			"size": new java.awt.Dimension( 590, 575 )
 		} )
 	}
 }

@@ -228,8 +228,7 @@ public class SoundFiles
         file.addChoosableFileFilter(filter);
         int returnValue = file.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
-            /*Path TO = Paths.get("profiles/user");
-            Files.move(file.getSelectedFile(), TO.resolve());*/
+            File selectedFile = file.getSelectedFile();
         }
 
     }
