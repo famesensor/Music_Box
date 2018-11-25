@@ -11,7 +11,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Korrawich K
+        // Generated using JFormDesigner Evaluation license - satit
         defaultButton1 = new JButton();
         defaultButton2 = new JButton();
         userButton = new JButton();
@@ -324,6 +324,9 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         defaultButton1.addMouseListener(this);
         defaultButton2.addMouseListener(this);
         changeButton.addMouseListener(this);
+        userButton.addMouseListener(this);
+        metronomeSlider.addMouseListener(this);
+        accentSlider.addMouseListener(this);
 
         button1.addKeyListener(this);
         button2.addKeyListener(this);
@@ -343,9 +346,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button16.addKeyListener(this);
         defaultButton1.addKeyListener(this);
         defaultButton2.addKeyListener(this);
-
-        metronomeSlider.addMouseListener(this);
-        accentSlider.addMouseListener(this);
+        userButton.addKeyListener(this);
     }
 
     public void actionPerformed(ActionEvent e)
@@ -373,6 +374,8 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         else if(e.getKeyCode() == KeyEvent.VK_V) { button16.requestFocus(); button16.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 16); }
         else if(e.getKeyCode() == KeyEvent.VK_O) { defaultButton1.requestFocus(); defaultButton1.setIcon(new ImageIcon("src/up_g.png")); temp = 0; }
         else if(e.getKeyCode() == KeyEvent.VK_P) { defaultButton2.requestFocus(); defaultButton2.setIcon(new ImageIcon("src/down_g.png")); temp = 1; }
+        else if(e.getKeyCode() == KeyEvent.VK_U) { userButton.requestFocus(); temp = 2; }
+        else if(e.getKeyCode() == KeyEvent.VK_I) { changeButton.requestFocus(); temp = 3; }
     }
 
     public void keyReleased(KeyEvent e)
@@ -427,6 +430,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         else if(e.getSource() == button16) { button16.setIcon(new ImageIcon(ChooseColor.randomColor())); SoundFiles.defaultFile(temp, 16); }
         else if(e.getSource() == defaultButton1) { defaultButton1.setIcon(new ImageIcon("src/up_g.png")); temp = 0; }
         else if(e.getSource() == defaultButton2) { defaultButton2.setIcon(new ImageIcon("src/down_g.png")); temp = 1; }
+        else if(e.getSource() == userButton) { temp = 2; }
         else if(e.getSource() == changeButton) { temp = 3; }
         new Thread() {
             public void run() {
@@ -444,7 +448,6 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
                 }
             }
         }.start();
-
         new Thread() {
             public void run() {
                 if(e.getSource() == accentSlider) {
@@ -462,7 +465,6 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
             }
         }.start();
     }
-
     public void mouseReleased(MouseEvent e)
     {
         if(e.getSource() == button1) { button1.setIcon(new ImageIcon("src/gray.png")); }
@@ -513,7 +515,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Korrawich K
+    // Generated using JFormDesigner Evaluation license - satit
     private JButton defaultButton1;
     private JButton defaultButton2;
     private JButton userButton;
