@@ -32,11 +32,9 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         button15 = new JButton();
         button16 = new JButton();
         changeButton = new JButton();
+        textField1 = new JTextField();
         accentSlider = new JSlider();
         metronomeSlider = new JSlider();
-        label2 = new JLabel();
-        label3 = new JLabel();
-        label4 = new JLabel();
         label1 = new JLabel();
 
         //======== this ========
@@ -46,188 +44,197 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         contentPane.setLayout(null);
 
         //---- defaultButton1 ----
-        defaultButton1.setIcon(new ImageIcon(getClass().getResource("/up_w.png")));
+        defaultButton1.setIcon(new ImageIcon(getClass().getResource("/Picture/up_w.png")));
         defaultButton1.setBorderPainted(false);
         defaultButton1.setContentAreaFilled(false);
         contentPane.add(defaultButton1);
-        defaultButton1.setBounds(150, 30, 100, defaultButton1.getPreferredSize().height);
+        defaultButton1.setBounds(170, 35, 100, defaultButton1.getPreferredSize().height);
 
         //---- defaultButton2 ----
-        defaultButton2.setIcon(new ImageIcon(getClass().getResource("/down_w.png")));
+        defaultButton2.setIcon(new ImageIcon(getClass().getResource("/Picture/down_w.png")));
         defaultButton2.setBorderPainted(false);
         defaultButton2.setContentAreaFilled(false);
         contentPane.add(defaultButton2);
-        defaultButton2.setBounds(255, 30, 100, defaultButton2.getPreferredSize().height);
+        defaultButton2.setBounds(275, 35, 100, defaultButton2.getPreferredSize().height);
 
         //---- userButton ----
-        userButton.setText("User");
+        userButton.setIcon(new ImageIcon(getClass().getResource("/Picture/user_w.png")));
+        userButton.setBorderPainted(false);
+        userButton.setContentAreaFilled(false);
         contentPane.add(userButton);
-        userButton.setBounds(360, 70, 100, userButton.getPreferredSize().height);
+        userButton.setBounds(380, 35, 100, userButton.getPreferredSize().height);
 
         //---- button1 ----
         button1.setBorderPainted(false);
-        button1.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button1.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button1.setAlignmentY(0.0F);
         button1.setMaximumSize(new Dimension(100, 100));
         button1.setMinimumSize(new Dimension(1000, 100));
         button1.setContentAreaFilled(false);
         contentPane.add(button1);
-        button1.setBounds(150, 110, 100, 100);
+        button1.setBounds(170, 120, 100, 100);
 
         //---- button2 ----
         button2.setBorderPainted(false);
-        button2.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button2.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button2.setAlignmentY(0.0F);
         button2.setMaximumSize(new Dimension(100, 100));
         button2.setMinimumSize(new Dimension(1000, 100));
         button2.setContentAreaFilled(false);
         contentPane.add(button2);
-        button2.setBounds(255, 110, 100, 100);
+        button2.setBounds(275, 120, 100, 100);
 
         //---- button3 ----
         button3.setBorderPainted(false);
-        button3.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button3.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button3.setAlignmentY(0.0F);
         button3.setMaximumSize(new Dimension(100, 100));
         button3.setMinimumSize(new Dimension(1000, 100));
         button3.setContentAreaFilled(false);
         contentPane.add(button3);
-        button3.setBounds(360, 110, 100, 100);
+        button3.setBounds(380, 120, 100, 100);
 
         //---- button4 ----
         button4.setBorderPainted(false);
-        button4.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button4.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button4.setAlignmentY(0.0F);
         button4.setMaximumSize(new Dimension(100, 100));
         button4.setMinimumSize(new Dimension(1000, 100));
         button4.setContentAreaFilled(false);
         contentPane.add(button4);
-        button4.setBounds(465, 110, 100, 100);
+        button4.setBounds(485, 120, 100, 100);
 
         //---- button5 ----
         button5.setBorderPainted(false);
-        button5.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button5.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button5.setAlignmentY(0.0F);
         button5.setMaximumSize(new Dimension(100, 100));
         button5.setMinimumSize(new Dimension(1000, 100));
         button5.setContentAreaFilled(false);
         contentPane.add(button5);
-        button5.setBounds(150, 215, 100, 100);
+        button5.setBounds(170, 225, 100, 100);
 
         //---- button6 ----
         button6.setBorderPainted(false);
-        button6.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button6.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button6.setAlignmentY(0.0F);
         button6.setMaximumSize(new Dimension(100, 100));
         button6.setMinimumSize(new Dimension(1000, 100));
         button6.setContentAreaFilled(false);
         contentPane.add(button6);
-        button6.setBounds(255, 215, 100, 100);
+        button6.setBounds(275, 225, 100, 100);
 
         //---- button7 ----
         button7.setBorderPainted(false);
-        button7.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button7.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button7.setAlignmentY(0.0F);
         button7.setMaximumSize(new Dimension(100, 100));
         button7.setMinimumSize(new Dimension(1000, 100));
         button7.setContentAreaFilled(false);
         contentPane.add(button7);
-        button7.setBounds(360, 215, 100, 100);
+        button7.setBounds(380, 225, 100, 100);
 
         //---- button8 ----
         button8.setBorderPainted(false);
-        button8.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button8.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button8.setAlignmentY(0.0F);
         button8.setMaximumSize(new Dimension(100, 100));
         button8.setMinimumSize(new Dimension(1000, 100));
         button8.setContentAreaFilled(false);
         contentPane.add(button8);
-        button8.setBounds(465, 215, 100, 100);
+        button8.setBounds(485, 225, 100, 100);
 
         //---- button9 ----
         button9.setBorderPainted(false);
-        button9.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button9.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button9.setAlignmentY(0.0F);
         button9.setMaximumSize(new Dimension(100, 100));
         button9.setMinimumSize(new Dimension(1000, 100));
         button9.setContentAreaFilled(false);
         contentPane.add(button9);
-        button9.setBounds(150, 320, 100, 100);
+        button9.setBounds(170, 330, 100, 100);
 
         //---- button10 ----
         button10.setBorderPainted(false);
-        button10.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button10.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button10.setAlignmentY(0.0F);
         button10.setMaximumSize(new Dimension(100, 100));
         button10.setMinimumSize(new Dimension(1000, 100));
         button10.setContentAreaFilled(false);
         contentPane.add(button10);
-        button10.setBounds(255, 320, 100, 100);
+        button10.setBounds(275, 330, 100, 100);
 
         //---- button11 ----
         button11.setBorderPainted(false);
-        button11.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button11.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button11.setAlignmentY(0.0F);
         button11.setMaximumSize(new Dimension(100, 100));
         button11.setMinimumSize(new Dimension(1000, 100));
         button11.setContentAreaFilled(false);
         contentPane.add(button11);
-        button11.setBounds(360, 320, 100, 100);
+        button11.setBounds(380, 330, 100, 100);
 
         //---- button12 ----
         button12.setBorderPainted(false);
-        button12.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button12.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button12.setAlignmentY(0.0F);
         button12.setMaximumSize(new Dimension(100, 100));
         button12.setMinimumSize(new Dimension(1000, 100));
         button12.setContentAreaFilled(false);
         contentPane.add(button12);
-        button12.setBounds(465, 320, 100, 100);
+        button12.setBounds(485, 330, 100, 100);
 
         //---- button13 ----
         button13.setBorderPainted(false);
-        button13.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button13.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button13.setAlignmentY(0.0F);
         button13.setMaximumSize(new Dimension(100, 100));
         button13.setMinimumSize(new Dimension(1000, 100));
         button13.setContentAreaFilled(false);
         contentPane.add(button13);
-        button13.setBounds(150, 425, 100, 100);
+        button13.setBounds(170, 435, 100, 100);
 
         //---- button14 ----
         button14.setBorderPainted(false);
-        button14.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button14.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button14.setAlignmentY(0.0F);
         button14.setMaximumSize(new Dimension(100, 100));
         button14.setMinimumSize(new Dimension(1000, 100));
         button14.setContentAreaFilled(false);
         contentPane.add(button14);
-        button14.setBounds(255, 425, 100, 100);
+        button14.setBounds(275, 435, 100, 100);
 
         //---- button15 ----
         button15.setBorderPainted(false);
-        button15.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button15.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button15.setAlignmentY(0.0F);
         button15.setMaximumSize(new Dimension(100, 100));
         button15.setMinimumSize(new Dimension(1000, 100));
         button15.setContentAreaFilled(false);
         contentPane.add(button15);
-        button15.setBounds(360, 425, 100, 100);
+        button15.setBounds(380, 435, 100, 100);
 
         //---- button16 ----
         button16.setBorderPainted(false);
-        button16.setIcon(new ImageIcon(getClass().getResource("/gray.png")));
+        button16.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
         button16.setAlignmentY(0.0F);
         button16.setMaximumSize(new Dimension(100, 100));
         button16.setMinimumSize(new Dimension(1000, 100));
         button16.setContentAreaFilled(false);
         contentPane.add(button16);
-        button16.setBounds(465, 425, 100, 100);
+        button16.setBounds(485, 435, 100, 100);
 
         //---- changeButton ----
-        changeButton.setText("C");
+        changeButton.setIcon(new ImageIcon(getClass().getResource("/Picture/change_w.png")));
+        changeButton.setBorderPainted(false);
+        changeButton.setContentAreaFilled(false);
         contentPane.add(changeButton);
-        changeButton.setBounds(465, 70, 100, changeButton.getPreferredSize().height);
+        changeButton.setBounds(485, 35, 100, changeButton.getPreferredSize().height);
+
+        //---- textField1 ----
+        textField1.setFocusable(false);
+        contentPane.add(textField1);
+        textField1.setBounds(20, 40, 125, 65);
 
         //---- accentSlider ----
         accentSlider.setOrientation(SwingConstants.VERTICAL);
@@ -241,7 +248,7 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         accentSlider.setPaintLabels(true);
         accentSlider.setValue(0);
         contentPane.add(accentSlider);
-        accentSlider.setBounds(75, 140, 65, 375);
+        accentSlider.setBounds(80, 160, 65, 375);
 
         //---- metronomeSlider ----
         metronomeSlider.setOrientation(SwingConstants.VERTICAL);
@@ -255,32 +262,12 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         metronomeSlider.setPaintLabels(true);
         metronomeSlider.setValue(0);
         contentPane.add(metronomeSlider);
-        metronomeSlider.setBounds(15, 140, 56, 375);
-
-        //---- label2 ----
-        label2.setText("METRONOME");
-        label2.setFont(new Font("Bauhaus 93", label2.getFont().getStyle() | Font.ITALIC, label2.getFont().getSize() + 8));
-        contentPane.add(label2);
-        label2.setBounds(10, 110, 135, label2.getPreferredSize().height);
-
-        //---- label3 ----
-        label3.setText("Music_Box");
-        label3.setFont(new Font("Bauhaus 93", label3.getFont().getStyle(), label3.getFont().getSize() + 9));
-        label3.setBackground(Color.white);
-        contentPane.add(label3);
-        label3.setBounds(15, 5, 120, label3.getPreferredSize().height);
-
-        //---- label4 ----
-        label4.setText("Launchpad");
-        label4.setFont(new Font("Bauhaus 93", label4.getFont().getStyle(), label4.getFont().getSize() + 9));
-        label4.setBackground(Color.white);
-        contentPane.add(label4);
-        label4.setBounds(435, 5, 130, 31);
+        metronomeSlider.setBounds(20, 160, 56, 375);
 
         //---- label1 ----
-        label1.setIcon(new ImageIcon("E:\\Docs\\#2-1\\CSS222\\Music_Box\\src\\bg.png"));
+        label1.setIcon(new ImageIcon("E:\\Docs\\#2-1\\CSS222\\Music_Box\\src\\Picture\\MS_Bg.png"));
         contentPane.add(label1);
-        label1.setBounds(0, 0, 590, 550);
+        label1.setBounds(0, 0, 600, 550);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -372,32 +359,32 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         else if(e.getKeyCode() == KeyEvent.VK_X) { button14.requestFocus(); button14.setIcon(new ImageIcon(RandomColor.randColor())); SoundFiles.defaultFile(temp, 14); }
         else if(e.getKeyCode() == KeyEvent.VK_C) { button15.requestFocus(); button15.setIcon(new ImageIcon(RandomColor.randColor())); SoundFiles.defaultFile(temp, 15); }
         else if(e.getKeyCode() == KeyEvent.VK_V) { button16.requestFocus(); button16.setIcon(new ImageIcon(RandomColor.randColor())); SoundFiles.defaultFile(temp, 16); }
-        else if(e.getKeyCode() == KeyEvent.VK_O) { defaultButton1.requestFocus(); defaultButton1.setIcon(new ImageIcon("src/up_g.png")); temp = 0; }
-        else if(e.getKeyCode() == KeyEvent.VK_P) { defaultButton2.requestFocus(); defaultButton2.setIcon(new ImageIcon("src/down_g.png")); temp = 1; }
-        else if(e.getKeyCode() == KeyEvent.VK_U) { userButton.requestFocus(); temp = 2; }
-        else if(e.getKeyCode() == KeyEvent.VK_I) { changeButton.requestFocus(); temp = 3; }
+        else if(e.getKeyCode() == KeyEvent.VK_O) { defaultButton1.requestFocus(); defaultButton1.setIcon(new ImageIcon("src/Picture/up_g.png")); temp = 0; }
+        else if(e.getKeyCode() == KeyEvent.VK_P) { defaultButton2.requestFocus(); defaultButton2.setIcon(new ImageIcon("src/Picture/down_g.png")); temp = 1; }
+        else if(e.getKeyCode() == KeyEvent.VK_U) { userButton.requestFocus(); userButton.setIcon(new ImageIcon("src/Picture/user_y.png")); temp = 2; }
     }
 
     public void keyReleased(KeyEvent e)
     {
-        if(e.getKeyCode() == KeyEvent.VK_1) { button1.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_2) { button2.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_3) { button3.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_4) { button4.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_Q) { button5.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_W) { button6.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_E) { button7.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_R) { button8.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_A) { button9.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_S) { button10.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_D) { button11.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_F) { button12.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_Z) { button13.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_X) { button14.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_C) { button15.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_V) { button16.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_O) { defaultButton1.setIcon(new ImageIcon("src/up_w.png")); }
-        else if(e.getKeyCode() == KeyEvent.VK_P) { defaultButton2.setIcon(new ImageIcon("src/down_w.png")); }
+        if(e.getKeyCode() == KeyEvent.VK_1) { button1.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_2) { button2.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_3) { button3.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_4) { button4.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_Q) { button5.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_W) { button6.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_E) { button7.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_R) { button8.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_A) { button9.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_S) { button10.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_D) { button11.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_F) { button12.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_Z) { button13.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_X) { button14.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_C) { button15.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_V) { button16.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_O) { defaultButton1.setIcon(new ImageIcon("src/Picture/up_w.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_P) { defaultButton2.setIcon(new ImageIcon("src/Picture/down_w.png")); }
+        else if(e.getKeyCode() == KeyEvent.VK_U) { userButton.setIcon(new ImageIcon("src/Picture/user_w.png")); }
     }
 
     public void keyTyped(KeyEvent e)
@@ -428,10 +415,10 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
         else if(e.getSource() == button14) { button14.setIcon(new ImageIcon(RandomColor.randColor())); SoundFiles.defaultFile(temp, 14); }
         else if(e.getSource() == button15) { button15.setIcon(new ImageIcon(RandomColor.randColor())); SoundFiles.defaultFile(temp, 15); }
         else if(e.getSource() == button16) { button16.setIcon(new ImageIcon(RandomColor.randColor())); SoundFiles.defaultFile(temp, 16); }
-        else if(e.getSource() == defaultButton1) { defaultButton1.setIcon(new ImageIcon("src/up_g.png")); temp = 0; }
-        else if(e.getSource() == defaultButton2) { defaultButton2.setIcon(new ImageIcon("src/down_g.png")); temp = 1; }
-        else if(e.getSource() == userButton) { temp = 2; }
-        else if(e.getSource() == changeButton) { temp = 3; }
+        else if(e.getSource() == defaultButton1) { defaultButton1.setIcon(new ImageIcon("src/Picture/up_g.png")); temp = 0; }
+        else if(e.getSource() == defaultButton2) { defaultButton2.setIcon(new ImageIcon("src/Picture/down_g.png")); temp = 1; }
+        else if(e.getSource() == userButton) { userButton.setIcon(new ImageIcon("src/Picture/user_y.png")); temp = 2;  }
+        else if(e.getSource() == changeButton) { changeButton.setIcon(new ImageIcon("src/Picture/change_y.png")); temp = 3; }
         new Thread() {
             public void run() {
                 if(e.getSource() == metronomeSlider) {
@@ -467,24 +454,26 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
     }
     public void mouseReleased(MouseEvent e)
     {
-        if(e.getSource() == button1) { button1.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button2) { button2.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button3) { button3.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button4) { button4.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button5) { button5.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button6) { button6.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button7) { button7.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button8) { button8.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button9) { button9.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button10) { button10.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button11) { button11.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button12) { button12.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button13) { button13.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button14) { button14.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button15) { button15.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == button16) { button16.setIcon(new ImageIcon("src/gray.png")); }
-        else if(e.getSource() == defaultButton1) { defaultButton1.setIcon(new ImageIcon("src/up_w.png")); }
-        else if(e.getSource() == defaultButton2) { defaultButton2.setIcon(new ImageIcon("src/down_w.png")); }
+        if(e.getSource() == button1) { button1.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button2) { button2.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button3) { button3.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button4) { button4.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button5) { button5.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button6) { button6.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button7) { button7.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button8) { button8.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button9) { button9.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button10) { button10.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button11) { button11.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button12) { button12.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button13) { button13.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button14) { button14.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button15) { button15.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == button16) { button16.setIcon(new ImageIcon("src/Picture/gray.png")); }
+        else if(e.getSource() == defaultButton1) { defaultButton1.setIcon(new ImageIcon("src/Picture/up_w.png")); }
+        else if(e.getSource() == defaultButton2) { defaultButton2.setIcon(new ImageIcon("src/Picture/down_w.png")); }
+        else if(e.getSource() == userButton) { userButton.setIcon(new ImageIcon("src/Picture/user_w.png")); }
+        else if(e.getSource() == changeButton) { changeButton.setIcon(new ImageIcon("src/Picture/change_w.png"));}
     }
 
     public void mouseEntered(MouseEvent e)
@@ -536,11 +525,9 @@ public class Pad extends JFrame implements ActionListener, KeyListener, MouseLis
     private JButton button15;
     private JButton button16;
     private JButton changeButton;
+    private JTextField textField1;
     private JSlider accentSlider;
     private JSlider metronomeSlider;
-    private JLabel label2;
-    private JLabel label3;
-    private JLabel label4;
     private JLabel label1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

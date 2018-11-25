@@ -48,14 +48,13 @@ public class Sound extends Thread
                 }
                 counter++;
                 if (counter%measure==0){
-                    File sound = new File("profiles/metrnme", "1.wav");
+                    File sound = new File("profiles/metrnme", "tock.wav");
                     Sound.play(sound);
                 }
                 else{
-                    File sound = new File("profiles/metrnme", "2.wav");
+                    File sound = new File("profiles/metrnme", "tick.wav");
                     Sound.play(sound);
                 }
-
             }
     }
 

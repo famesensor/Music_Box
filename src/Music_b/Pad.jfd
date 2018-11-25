@@ -9,263 +9,276 @@ new FormModel {
 			"title": "Music_Box"
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "defaultButton1"
-				"icon": new com.jformdesigner.model.SwingIcon( 0, "/up_w.png" )
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/up_w.png" )
 				"borderPainted": false
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 150
-				"y": 30
+				"x": 170
+				"y": 35
 				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "defaultButton2"
-				"icon": new com.jformdesigner.model.SwingIcon( 0, "/down_w.png" )
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/down_w.png" )
 				"borderPainted": false
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 255
-				"y": 30
+				"x": 275
+				"y": 35
 				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "userButton"
-				"text": "User"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/user_w.png" )
+				"borderPainted": false
+				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 360
-				"y": 70
+				"x": 380
+				"y": 35
 				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
 				"borderPainted": false
-				"icon": &SwingIcon0 new com.jformdesigner.model.SwingIcon( 0, "/gray.png" )
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": &Dimension0 new java.awt.Dimension( 100, 100 )
 				"minimumSize": &Dimension1 new java.awt.Dimension( 1000, 100 )
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 150
-				"y": 110
+				"x": 170
+				"y": 120
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button2"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 255
-				"y": 110
+				"x": 275
+				"y": 120
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button3"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 360
-				"y": 110
+				"x": 380
+				"y": 120
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button4"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 465
-				"y": 110
+				"x": 485
+				"y": 120
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button5"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 150
-				"y": 215
+				"x": 170
+				"y": 225
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button6"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 255
-				"y": 215
+				"x": 275
+				"y": 225
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button7"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 360
-				"y": 215
+				"x": 380
+				"y": 225
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button8"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 465
-				"y": 215
+				"x": 485
+				"y": 225
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button9"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 150
-				"y": 320
+				"x": 170
+				"y": 330
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button10"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 255
-				"y": 320
+				"x": 275
+				"y": 330
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button11"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 360
-				"y": 320
+				"x": 380
+				"y": 330
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button12"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 465
-				"y": 320
+				"x": 485
+				"y": 330
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button13"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 150
-				"y": 425
+				"x": 170
+				"y": 435
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button14"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 255
-				"y": 425
+				"x": 275
+				"y": 435
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button15"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 360
-				"y": 425
+				"x": 380
+				"y": 435
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button16"
 				"borderPainted": false
-				"icon": #SwingIcon0
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
 				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 465
-				"y": 425
+				"x": 485
+				"y": 435
 				"width": 100
 				"height": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "changeButton"
-				"text": "C"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/change_w.png" )
+				"borderPainted": false
+				"contentAreaFilled": false
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 465
-				"y": 70
+				"x": 485
+				"y": 35
 				"width": 100
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+				"focusable": false
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 20
+				"y": 40
+				"width": 125
+				"height": 65
 			} )
 			add( new FormComponent( "javax.swing.JSlider" ) {
 				name: "accentSlider"
@@ -278,8 +291,8 @@ new FormModel {
 				"paintLabels": true
 				"value": 0
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 75
-				"y": 140
+				"x": 80
+				"y": 160
 				"height": 375
 				"width": 65
 			} )
@@ -294,53 +307,23 @@ new FormModel {
 				"paintLabels": true
 				"value": 0
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 15
-				"y": 140
+				"x": 20
+				"y": 160
 				"height": 375
 				"width": 56
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label2"
-				"text": "METRONOME"
-				"font": new com.jformdesigner.model.SwingDerivedFont( "Bauhaus 93", 2, 8, false )
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 10
-				"y": 110
-				"width": 135
-			} )
-			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label3"
-				"text": "Music_Box"
-				"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( "Bauhaus 93", 0, 9, false )
-				"background": new java.awt.Color( 255, 255, 255, 255 )
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 15
-				"y": 5
-				"width": 120
-			} )
-			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label4"
-				"text": "Launchpad"
-				"font": #SwingDerivedFont0
-				"background": new java.awt.Color( 255, 255, 255, 255 )
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 130
-				"height": 31
-				"x": 435
-				"y": 5
-			} )
-			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
-				"icon": new com.jformdesigner.model.SwingIcon( 1, "E:\\Docs\\#2-1\\CSS222\\Music_Box\\src\\bg.png" )
+				"icon": new com.jformdesigner.model.SwingIcon( 1, "E:\\Docs\\#2-1\\CSS222\\Music_Box\\src\\Picture\\MS_Bg.png" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 0
 				"y": 0
-				"width": 590
+				"width": 600
 				"height": 550
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 590, 575 )
+			"size": new java.awt.Dimension( 600, 580 )
 		} )
 	}
 }

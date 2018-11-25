@@ -171,50 +171,35 @@ public class SoundFiles
             if (num == 1) {
                 SoundFiles.selectFile(num);
             } else if (num == 2) {
-                File Sound = new File("profiles/default2", "2.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 3) {
-                File Sound = new File("profiles/default2", "3.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 4) {
-                File Sound = new File("profiles/default2", "4.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 5) {
-                File Sound = new File("profiles/default2", "5.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 6) {
-                File Sound = new File("profiles/default2", "6.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 7) {
-                File Sound = new File("profiles/default2", "7.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 8) {
-                File Sound = new File("profiles/default2", "8.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 9) {
-                File Sound = new File("profiles/default2", "9.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 10) {
-                File Sound = new File("profiles/default2", "10.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 11) {
-                File Sound = new File("profiles/default2", "11.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 12) {
-                File Sound = new File("profiles/default2", "12.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 13) {
-                File Sound = new File("profiles/default2", "13.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 14) {
-                File Sound = new File("profiles/default2", "14.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 15) {
-                File Sound = new File("profiles/default2", "15.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             } else if (num == 16) {
-                File Sound = new File("profiles/default2", "16.wav");
-                Music_b.Sound.play(Sound);
+                SoundFiles.selectFile(num);
             }
         }
     }
