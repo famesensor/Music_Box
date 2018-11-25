@@ -9,12 +9,6 @@ public class Sound extends Thread
 {
     private static Clip clip;
     static int flag = 1;
-
-    public Sound()
-    {
-
-    }
-
     public static void play(File fileName) {
         try
         {
@@ -28,14 +22,6 @@ public class Sound extends Thread
             System.out.println("error: " + e.getMessage() + " for " + fileName);
         }
     }
-
-    public static void pause()
-    {
-        if (clip != null) {
-            clip.stop();
-        }
-    }
-
     public static void Metronome(double bpm, int measure) {
         int counter = 0;
         if(measure != 0)

@@ -274,6 +274,8 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField1"
 				"focusable": false
+				"font": new java.awt.Font( "Bauhaus 93", 0, 14 )
+				"text": "Defualt1"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 20
 				"y": 40

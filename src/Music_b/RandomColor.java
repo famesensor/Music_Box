@@ -3,7 +3,6 @@ package Music_b;
 import java.util.Random;
 
 public class RandomColor {
-
     public static String randColor()
     {
         Random rand = new Random();
