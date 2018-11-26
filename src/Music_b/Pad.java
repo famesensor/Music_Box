@@ -11,7 +11,7 @@ public class Pad extends JFrame implements KeyListener, MouseListener, ChangeLis
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - satit
+        // Generated using JFormDesigner Evaluation license - Korrawich K
         defaultButton1 = new JButton();
         defaultButton2 = new JButton();
         userButton = new JButton();
@@ -86,7 +86,7 @@ public class Pad extends JFrame implements KeyListener, MouseListener, ChangeLis
 
         //---- button3 ----
         button3.setBorderPainted(false);
-        button3.setIcon(new ImageIcon(getClass().getResource("/Picture/gray.png")));
+        button3.setIcon(new ImageIcon("/Users/knwch/IdeaProjects/Music_Box/src/Picture/gray.png"));
         button3.setAlignmentY(0.0F);
         button3.setMaximumSize(new Dimension(100, 100));
         button3.setMinimumSize(new Dimension(1000, 100));
@@ -234,14 +234,17 @@ public class Pad extends JFrame implements KeyListener, MouseListener, ChangeLis
         //---- textField1 ----
         textField1.setFocusable(false);
         textField1.setFont(new Font("Bauhaus 93", Font.PLAIN, 14));
-        textField1.setText("Defualt1");
+        textField1.setText("Default 1");
+        textField1.setHorizontalAlignment(SwingConstants.CENTER);
+        textField1.setBackground(Color.white);
+        textField1.setBorder(new LineBorder(new Color(224, 195, 65), 4));
         contentPane.add(textField1);
         textField1.setBounds(20, 40, 125, 65);
 
         //---- accentSlider ----
         accentSlider.setOrientation(SwingConstants.VERTICAL);
         accentSlider.setBorder(new CompoundBorder(
-            new TitledBorder("Accent"),
+            new TitledBorder(new LineBorder(new Color(128, 103, 183), 2, true), "Accent", TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION, null, Color.white),
             new EmptyBorder(5, 5, 5, 5)));
         accentSlider.setPaintTicks(true);
         accentSlider.setSnapToTicks(true);
@@ -249,13 +252,15 @@ public class Pad extends JFrame implements KeyListener, MouseListener, ChangeLis
         accentSlider.setMaximum(4);
         accentSlider.setPaintLabels(true);
         accentSlider.setValue(0);
+        accentSlider.setForeground(Color.white);
+        accentSlider.setFont(new Font(".SF NS Text", Font.BOLD, 11));
         contentPane.add(accentSlider);
-        accentSlider.setBounds(80, 160, 65, 375);
+        accentSlider.setBounds(85, 160, 66, 370);
 
         //---- metronomeSlider ----
         metronomeSlider.setOrientation(SwingConstants.VERTICAL);
         metronomeSlider.setBorder(new CompoundBorder(
-            new TitledBorder("BPM"),
+            new TitledBorder(new LineBorder(new Color(160, 206, 203), 2, true), "BPM", TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION, null, Color.white),
             new EmptyBorder(5, 5, 5, 5)));
         metronomeSlider.setMaximum(240);
         metronomeSlider.setMajorTickSpacing(30);
@@ -263,11 +268,13 @@ public class Pad extends JFrame implements KeyListener, MouseListener, ChangeLis
         metronomeSlider.setSnapToTicks(true);
         metronomeSlider.setPaintLabels(true);
         metronomeSlider.setValue(0);
+        metronomeSlider.setForeground(Color.white);
+        metronomeSlider.setFont(new Font(".SF NS Text", Font.BOLD, 11));
         contentPane.add(metronomeSlider);
-        metronomeSlider.setBounds(20, 160, 56, 375);
+        metronomeSlider.setBounds(12, 160, 72, 370);
 
         //---- label1 ----
-        label1.setIcon(new ImageIcon("E:\\Docs\\#2-1\\CSS222\\Music_Box\\src\\Picture\\MS_Bg.png"));
+        label1.setIcon(new ImageIcon("/Users/knwch/IdeaProjects/Music_Box/src/Picture/MS_Bg.jpg"));
         contentPane.add(label1);
         label1.setBounds(0, 0, 600, 550);
 
@@ -425,19 +432,19 @@ public class Pad extends JFrame implements KeyListener, MouseListener, ChangeLis
                 defaultButton1.requestFocus();
                 defaultButton1.setIcon(new ImageIcon("src/Picture/up_g.png"));
                 temp = 0;
-                textField1.setText("Defualt1");
+                textField1.setText("Default 1");
                 break;
             case KeyEvent.VK_P:
                 defaultButton2.requestFocus();
                 defaultButton2.setIcon(new ImageIcon("src/Picture/down_g.png"));
                 temp = 1;
-                textField1.setText("Defualt2");
+                textField1.setText("Default 2");
                 break;
             case KeyEvent.VK_U:
                 userButton.requestFocus();
                 userButton.setIcon(new ImageIcon("src/Picture/user_y.png"));
                 temp = 2;
-                textField1.setText("UserProfile");
+                textField1.setText("User");
                 break;
             }
         }
@@ -534,9 +541,9 @@ public class Pad extends JFrame implements KeyListener, MouseListener, ChangeLis
         else if(e.getSource() == button14) { button14.setIcon(new ImageIcon(RandomColor.randColor())); SoundFiles.defaultFile(temp, 14); }
         else if(e.getSource() == button15) { button15.setIcon(new ImageIcon(RandomColor.randColor())); SoundFiles.defaultFile(temp, 15); }
         else if(e.getSource() == button16) { button16.setIcon(new ImageIcon(RandomColor.randColor())); SoundFiles.defaultFile(temp, 16); }
-        else if(e.getSource() == defaultButton1) { defaultButton1.setIcon(new ImageIcon("src/Picture/up_g.png")); temp = 0; textField1.setText("Defualt1"); }
-        else if(e.getSource() == defaultButton2) { defaultButton2.setIcon(new ImageIcon("src/Picture/down_g.png")); temp = 1; textField1.setText("Defualt2"); }
-        else if(e.getSource() == userButton) { userButton.setIcon(new ImageIcon("src/Picture/user_y.png")); temp = 2; textField1.setText("UserProfile"); }
+        else if(e.getSource() == defaultButton1) { defaultButton1.setIcon(new ImageIcon("src/Picture/up_g.png")); temp = 0; textField1.setText("Default 1"); }
+        else if(e.getSource() == defaultButton2) { defaultButton2.setIcon(new ImageIcon("src/Picture/down_g.png")); temp = 1; textField1.setText("Default 2"); }
+        else if(e.getSource() == userButton) { userButton.setIcon(new ImageIcon("src/Picture/user_y.png")); temp = 2; textField1.setText("User"); }
         else if(e.getSource() == changeButton) { changeButton.setIcon(new ImageIcon("src/Picture/change_y.png")); temp = 3; textField1.setText("Select Button"); }
         new Thread() {
             public void run() {
@@ -607,7 +614,7 @@ public class Pad extends JFrame implements KeyListener, MouseListener, ChangeLis
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - satit
+    // Generated using JFormDesigner Evaluation license - Korrawich K
     private JButton defaultButton1;
     private JButton defaultButton2;
     private JButton userButton;

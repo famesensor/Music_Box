@@ -5,7 +5,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
 
-public class Sound extends Thread
+public class Sound
 {
     private static Clip clip;
     static int flag = 1;
@@ -34,7 +34,7 @@ public class Sound extends Thread
                 }
                 counter++;
                 if (counter%measure==0){
-                    File sound = new File("profiles/metrnme", "tock.wav");
+                    File sound = new File("profiles/metrnme", "tok.wav");
                     Sound.play(sound);
                 }
                 else{

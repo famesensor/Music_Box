@@ -68,7 +68,7 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button3"
 				"borderPainted": false
-				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Picture/gray.png" )
+				"icon": new com.jformdesigner.model.SwingIcon( 1, "/Users/knwch/IdeaProjects/Music_Box/src/Picture/gray.png" )
 				"alignmentY": 0.0f
 				"maximumSize": #Dimension0
 				"minimumSize": #Dimension1
@@ -275,7 +275,10 @@ new FormModel {
 				name: "textField1"
 				"focusable": false
 				"font": new java.awt.Font( "Bauhaus 93", 0, 14 )
-				"text": "Defualt1"
+				"text": "Default 1"
+				"horizontalAlignment": 0
+				"background": sfield java.awt.Color white
+				"border": new javax.swing.border.LineBorder( new java.awt.Color( 224, 195, 65, 255 ), 4, false )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 20
 				"y": 40
@@ -285,38 +288,42 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JSlider" ) {
 				name: "accentSlider"
 				"orientation": 1
-				"border": new javax.swing.border.CompoundBorder( new javax.swing.border.TitledBorder( "Accent" ), &EmptyBorder0 new javax.swing.border.EmptyBorder( 5, 5, 5, 5 ) )
+				"border": new javax.swing.border.CompoundBorder( new javax.swing.border.TitledBorder( new javax.swing.border.LineBorder( new java.awt.Color( 128, 103, 183, 255 ), 2, true ), "Accent", 2, 0, null, sfield java.awt.Color white ), &EmptyBorder0 new javax.swing.border.EmptyBorder( 5, 5, 5, 5 ) )
 				"paintTicks": true
 				"snapToTicks": true
 				"majorTickSpacing": 1
 				"maximum": 4
 				"paintLabels": true
 				"value": 0
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				"font": new java.awt.Font( ".SF NS Text", 1, 11 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 80
+				"x": 85
 				"y": 160
-				"height": 375
-				"width": 65
+				"height": 370
+				"width": 66
 			} )
 			add( new FormComponent( "javax.swing.JSlider" ) {
 				name: "metronomeSlider"
 				"orientation": 1
-				"border": new javax.swing.border.CompoundBorder( new javax.swing.border.TitledBorder( "BPM" ), #EmptyBorder0 )
+				"border": new javax.swing.border.CompoundBorder( new javax.swing.border.TitledBorder( new javax.swing.border.LineBorder( new java.awt.Color( 160, 206, 203, 255 ), 2, true ), "BPM", 2, 0, null, sfield java.awt.Color white ), #EmptyBorder0 )
 				"maximum": 240
 				"majorTickSpacing": 30
 				"paintTicks": true
 				"snapToTicks": true
 				"paintLabels": true
 				"value": 0
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				"font": new java.awt.Font( ".SF NS Text", 1, 11 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 20
+				"x": 12
 				"y": 160
-				"height": 375
-				"width": 56
+				"height": 370
+				"width": 72
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
-				"icon": new com.jformdesigner.model.SwingIcon( 1, "E:\\Docs\\#2-1\\CSS222\\Music_Box\\src\\Picture\\MS_Bg.png" )
+				"icon": new com.jformdesigner.model.SwingIcon( 1, "/Users/knwch/IdeaProjects/Music_Box/src/Picture/MS_Bg.jpg" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 0
 				"y": 0
@@ -325,7 +332,7 @@ new FormModel {
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 600, 580 )
+			"size": new java.awt.Dimension( 600, 575 )
 		} )
 	}
 }
